@@ -21,10 +21,10 @@ import java.util.ResourceBundle;
 public class VerClienteController implements Initializable {
 
     @FXML
-    private Button botaoDeletar;
+    private Button botaoFechar;
 
     @FXML
-    private Button botaoFechar;
+    private Button botaoRelatorio;
 
     @FXML
     private Button botaoVoltar;
@@ -33,25 +33,13 @@ public class VerClienteController implements Initializable {
     private Label clienteLabel;
 
     @FXML
-    private Label confirmarDelete;
-
-    @FXML
     private Label funcionariosLabel;
-
-    @FXML
-    private ImageView iconeImagem;
 
     @FXML
     private AnchorPane painelPrincipal;
 
     @FXML
     private ScrollPane scroll;
-
-    @FXML
-    private TextField usuariosText;
-
-    @FXML
-    private ImageView voltarImagem;
 
 
     @Override
@@ -69,29 +57,13 @@ public class VerClienteController implements Initializable {
         botaoFechar.setOnMouseClicked((event)->{
             PrincipalVerCliente.getStage().close();
         });
-        botaoDeletar.setOnMouseClicked((event)->{
+        botaoRelatorio.setOnMouseClicked((event)->{
             jaspercontrollercliente jaspercontrollercliente =new jaspercontrollercliente();
             try {
                 jaspercontrollercliente.gerarRelatorio();
             } catch (JRException e) {
                 throw new RuntimeException(e);
             }
-            /*for (cliente c : clienteList){
-                if (c.getIdCliente()==Long.valueOf(usuariosText.getText())){
-                    System.out.println(c.getIdCliente());
-                    clienteDAO.delete(c.getIdCliente());
-                    PrincipalVerCliente principalVerCliente = new PrincipalVerCliente();
-                    PrincipalVerCliente.getStage().close();
-                    try {
-                        principalVerCliente.start(new Stage());
-                    }catch (Exception e){
-
-                    }
-                }else {
-                    confirmarDelete.setText("Cliente foi nâo encontrado");
-                    confirmarDelete.setTextFill(Paint.valueOf("#ff0000"));
-                }
-            }*/
         });
         botaoVoltar.setOnMouseClicked((event)->{
             PrincipalMenuFuncionario principalMenuFuncionario = new PrincipalMenuFuncionario();

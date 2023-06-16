@@ -9,9 +9,9 @@
 
 <AnchorPane fx:id="painelPrincipal" prefHeight="588.0" prefWidth="490.0" style="-fx-background-radius: 50px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.BebidasFuncionarioController">
    <children>
-      <Button fx:id="botaoDeletar" layoutX="310.0" layoutY="456.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #ffa500;" text="Deletar" textFill="WHITE" />
-      <Button fx:id="botaoEditar" layoutX="208.0" layoutY="456.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #ffa500;" text="Editar" textFill="WHITE" />
-      <Button fx:id="botaoCriar" layoutX="106.0" layoutY="456.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #ffa500;" text="Criar" textFill="WHITE" />
+      <Button fx:id="botaoDeletar" layoutX="256.0" layoutY="456.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #ffa500;" text="Deletar" textFill="WHITE" />
+      <Button fx:id="botaoEditar" layoutX="154.0" layoutY="456.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #ffa500;" text="Editar" textFill="WHITE" />
+      <Button fx:id="botaoCriar" layoutX="52.0" layoutY="456.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #ffa500;" text="Criar" textFill="WHITE" />
       <TextField fx:id="usuarioText" layoutX="150.0" layoutY="371.0" prefHeight="25.0" prefWidth="199.0" promptText="Usuários" style="-fx-background-radius: 10px;" />
       <Label fx:id="pizzaLabel" layoutX="137.0" layoutY="32.0" text="Bebidas" textFill="ORANGE">
          <font>
@@ -34,5 +34,6 @@
             <Label fx:id="listaB" alignment="TOP_LEFT" prefHeight="5000.0" prefWidth="1000.0" text="Label" />
          </content>
       </ScrollPane>
+      <Button fx:id="botaoRelatorio" layoutX="349.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;" text="Relatório" textFill="WHITE" />
    </children>
 </AnchorPane>

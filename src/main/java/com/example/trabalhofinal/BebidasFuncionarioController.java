@@ -28,6 +28,9 @@ public class BebidasFuncionarioController implements Initializable {
     private Button botaoCriar;
 
     @FXML
+    private Button botaoRelatorio;
+
+    @FXML
     private Button botaoDeletar;
 
     @FXML

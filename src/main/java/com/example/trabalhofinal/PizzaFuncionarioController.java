@@ -40,6 +40,9 @@ public class PizzaFuncionarioController implements Initializable {
     private Button botaoVoltar;
 
     @FXML
+    private Button botaoRelatorio;
+
+    @FXML
     private Label listagemP;
 
     @FXML

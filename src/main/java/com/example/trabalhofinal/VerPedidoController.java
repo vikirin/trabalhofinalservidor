@@ -33,6 +33,8 @@ public class VerPedidoController implements Initializable {
     private Button botaoVoltar;
 
     @FXML
+    private Button botaoRelatorio;
+    @FXML
     private Label lisbebida;
 
     @FXML
