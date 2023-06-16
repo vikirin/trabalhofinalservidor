@@ -12,9 +12,8 @@
          <children>
             <TextField fx:id="textNome" alignment="CENTER" layoutX="16.0" layoutY="76.0" prefHeight="25.0" prefWidth="225.0" promptText="CPF" style="-fx-background-radius: 10px; -fx-background-color: transparent;" />
             <PasswordField fx:id="textSenha" alignment="CENTER" layoutX="16.0" layoutY="111.0" prefHeight="25.0" prefWidth="225.0" promptText="Senha" style="-fx-background-radius: 10px; -fx-background-color: transparent;" />
-            <Button fx:id="botaoEntrar" layoutX="10.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #FFA500; -fx-background-radius: 15px;" text="Entrar" textFill="WHITE" />
-            <Button fx:id="botaoCadastrar" layoutX="90.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #FFA500; -fx-background-radius: 15px;" text="Cadastrar" textFill="WHITE" />
-            <Button fx:id="botaoVoltar" layoutX="169.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #FFA500; -fx-background-radius: 15px;" text="Voltar" textFill="WHITE" />
+            <Button fx:id="botaoEntrar" layoutX="51.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #FFA500; -fx-background-radius: 15px;" text="Entrar" textFill="WHITE" />
+            <Button fx:id="botaoCadastrar" layoutX="129.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #FFA500; -fx-background-radius: 15px;" text="Cadastrar" textFill="WHITE" />
             <Label fx:id="erroLabel" layoutX="65.0" layoutY="147.0" textFill="RED" />
          </children>
       </AnchorPane>

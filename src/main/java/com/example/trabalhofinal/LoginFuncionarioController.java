@@ -29,9 +29,6 @@ public class LoginFuncionarioController implements Initializable {
     private Button botaoEntrar;
 
     @FXML
-    private Button botaoVoltar;
-
-    @FXML
     private Label erroLabel;
 
     @FXML
