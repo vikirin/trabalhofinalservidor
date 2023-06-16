@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="painelPrincipal" prefHeight="711.0" prefWidth="868.0" style="-fx-background-radius: 50px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.VerPedidoController">
+   <children>
+      <Label fx:id="pedidoLabel" layoutX="338.0" layoutY="24.0" text="Pedidos" textFill="ORANGE">
+         <font>
+            <Font name="Consolas" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoFechar" layoutX="803.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: TRANSPARENT;" text="X" textFill="ORANGE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <ScrollPane fx:id="scrollpiz" layoutX="20.0" layoutY="151.0" prefHeight="396.0" prefWidth="391.0">
+         <content>
+            <Label fx:id="pizzaLabel" alignment="TOP_LEFT" prefHeight="5000.0" prefWidth="675.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fx:id="voltarImagem" fitHeight="83.0" fitWidth="69.0" layoutX="400.0" layoutY="597.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/desfazer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="382.0" layoutY="597.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="105.0" style="-fx-background-color: transparent;" />
+      <ScrollPane fx:id="scrollbebida" layoutX="457.0" layoutY="151.0" prefHeight="396.0" prefWidth="391.0">
+         <content>
+            <Label fx:id="bebidaLabel" alignment="TOP_LEFT" prefHeight="5000.0" prefWidth="675.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="lispizza" layoutX="174.0" layoutY="99.0" text="Pizza">
+         <font>
+            <Font name="Consolas" size="30.0" />
+         </font></Label>
+      <Label fx:id="lisbebida" layoutX="603.0" layoutY="99.0" text="Bebidas">
+         <font>
+            <Font name="Consolas" size="30.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

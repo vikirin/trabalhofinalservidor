@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="painelPrincipal" prefHeight="537.0" prefWidth="475.0" style="-fx-background-radius: 50px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.PizzaFuncionarioController">
+   <children>
+      <Button fx:id="botaoDeletar" layoutX="305.0" layoutY="405.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="Deletar" textFill="WHITE" />
+      <Button fx:id="botaoEditar" layoutX="193.0" layoutY="405.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="Editar" textFill="WHITE" />
+      <Button fx:id="botaoCriar" layoutX="82.0" layoutY="405.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="Criar" textFill="WHITE" />
+      <TextField fx:id="usuarioText" layoutX="135.0" layoutY="310.0" prefHeight="25.0" prefWidth="199.0" promptText="Usuários" style="-fx-background-radius: 10px;" />
+      <Label fx:id="pizzaLabel" layoutX="157.0" layoutY="25.0" text="Pizza" textFill="ORANGE">
+         <font>
+            <Font name="Consolas" size="56.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoFechar" layoutX="413.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="X" textFill="ORANGE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="pessoaImagem" fitHeight="103.0" fitWidth="28.0" layoutX="95.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/PessoasPesquisa.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="voltarImagem" fitHeight="52.0" fitWidth="38.0" layoutX="215.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/desfazer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="208.0" layoutY="453.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+      <Label fx:id="avisoLabel" layoutX="131.0" layoutY="353.0" textFill="#62d753">
+         <font>
+            <Font name="Corbel Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrolllP" layoutX="54.0" layoutY="101.0" prefHeight="193.0" prefWidth="373.0">
+         <content>
+            <Label fx:id="listagemP" alignment="TOP_LEFT" prefHeight="3000.0" prefWidth="1000.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
