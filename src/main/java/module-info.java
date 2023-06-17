@@ -1,4 +1,4 @@
-module com.example.trabalhors2 {
+module com.example.trabalhofinal {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -11,8 +11,10 @@ module com.example.trabalhors2 {
 
     opens com.example.trabalhofinal to javafx.fxml;
     exports com.example.trabalhofinal;
-    exports auxiliares;
-    opens auxiliares to javafx.fxml;
-    exports jasper;
-    opens jasper to javafx.fxml;
+    opens com.example.trabalhofinal.model to javafx.fxml;
+    exports com.example.trabalhofinal.model;
+    opens com.example.trabalhofinal.auxiliares to javafx.fxml;
+    exports com.example.trabalhofinal.auxiliares;
+    opens com.example.trabalhofinal.jasper to javafx.fxml;
+    exports com.example.trabalhofinal.jasper;
 }

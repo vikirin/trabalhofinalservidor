@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -23,7 +25,6 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="botaoVoltar" layoutX="224.0" layoutY="499.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: transparent;" text="voltar" />
       <Label fx:id="avisoLabel" layoutX="155.0" layoutY="405.0">
          <font>
             <Font name="Corbel Bold Italic" size="15.0" />
@@ -35,5 +36,11 @@
          </content>
       </ScrollPane>
       <Button fx:id="botaoRelatorio" layoutX="349.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;" text="Relatório" textFill="WHITE" />
+      <ImageView fx:id="imagemVoltar" fitHeight="52.0" fitWidth="39.0" layoutX="227.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="C:/Users/notes/OneDrive - Sociedade Goiana de Cultura/Restaurante/Funcionario/desfazer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="218.0" layoutY="499.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="60.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

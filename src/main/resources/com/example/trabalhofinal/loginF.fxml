@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="painelPrincipal" prefHeight="517.0" prefWidth="476.0" style="-fx-background-color: transparent; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.LoginFuncionarioController">
@@ -17,6 +19,13 @@
             <Label fx:id="erroLabel" layoutX="65.0" layoutY="147.0" textFill="RED" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="retanguloCima" prefHeight="172.0" prefWidth="476.0" style="-fx-background-color: #FFA500; -fx-background-radius: 20px;" />
+      <AnchorPane fx:id="retanguloCima" prefHeight="172.0" prefWidth="476.0" style="-fx-background-color: #FFA500; -fx-background-radius: 20px;">
+         <children>
+            <ImageView fx:id="imagemLogo" fitHeight="160.0" fitWidth="192.0" layoutX="158.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:/Users/notes/OneDrive - Sociedade Goiana de Cultura/Restaurante/Geral/logo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

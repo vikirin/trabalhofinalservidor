@@ -1,18 +1,17 @@
 package com.example.trabalhofinal;
 
-import dao.ClienteDAO;
-import jasper.jaspercontrollercliente;
+import com.example.trabalhofinal.dao.ClienteDAO;
+import com.example.trabalhofinal.jasper.jaspercontrollercliente;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import model.cliente;
+import com.example.trabalhofinal.model.cliente;
 import net.sf.jasperreports.engine.JRException;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.List;
@@ -28,6 +27,9 @@ public class VerClienteController implements Initializable {
 
     @FXML
     private Button botaoVoltar;
+
+    @FXML
+    private ImageView imagemVoltar;
 
     @FXML
     private Label clienteLabel;
@@ -51,7 +53,7 @@ public class VerClienteController implements Initializable {
         List<cliente> clienteList = clienteDAO.findall();
 
         for (cliente c : clienteList){
-            pronto=pronto+"-> ID: "+c.getIdCliente()+"\n-> Nome: "+c.getNome()+"\n-> Nome de Usuário: "+c.getNomeconta()+"\n-------------------------------------------------------------------------------\n";
+            pronto=pronto+"-> ID: "+c.getIdCliente()+"\n-> Nome: "+c.getNome()+"\n-> Nome de Usuário: "+c.getNomeConta()+"\n-------------------------------------------------------------------------------\n";
         }
         funcionariosLabel.setText(pronto);
         botaoFechar.setOnMouseClicked((event)->{

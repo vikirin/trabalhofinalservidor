@@ -8,8 +8,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import dao.PizzaDAO;
-import model.pizza;
+import com.example.trabalhofinal.dao.PizzaDAO;
+import com.example.trabalhofinal.model.pizza;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,7 +41,7 @@ public class CriarPizzaController implements Initializable {
     private TextField valorTxt;
 
     @FXML
-    private ImageView voltarImagem;
+    private ImageView imagemVoltar;
 
 
 

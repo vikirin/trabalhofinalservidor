@@ -8,14 +8,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="painelPrincipal" prefHeight="474.0" prefWidth="500.0" style="-fx-background-radius: 50px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.CriarBebidasController">
    <children>
-      <ImageView fx:id="imagemVoltar" fitHeight="58.0" fitWidth="23.0" layoutX="235.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/desfazer.png" />
-         </image>
-      </ImageView>
       <Label fx:id="criarBebidasLabel" layoutX="68.0" layoutY="67.0" text="Criar Bebidas" textFill="ORANGE">
          <font>
             <Font name="Consolas" size="50.0" />
@@ -27,9 +21,14 @@
          </font>
       </Button>
       <Button fx:id="botaoCriar" layoutX="197.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #FFA500; -fx-background-radius: 10px;" text="Criar" textFill="WHITE" />
-      <Button fx:id="botaoVoltar" layoutX="221.0" layoutY="366.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: transparent;" />
       <TextField fx:id="nomeTxt" layoutX="121.0" layoutY="178.0" prefHeight="25.0" prefWidth="252.0" promptText="Nome da Bebida" style="-fx-background-radius: 10px;" />
       <TextField fx:id="valorTxt" layoutX="121.0" layoutY="218.0" prefHeight="25.0" prefWidth="252.0" promptText="Valor da Bebida" style="-fx-background-radius: 10px;" />
       <TextField fx:id="imagemTxt" layoutX="121.0" layoutY="258.0" prefHeight="25.0" prefWidth="252.0" promptText="Imagem da Bebida" style="-fx-background-radius: 10px;" />
+      <ImageView fx:id="imagemVoltar" fitHeight="52.0" fitWidth="39.0" layoutX="227.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="C:/Users/notes/OneDrive - Sociedade Goiana de Cultura/Restaurante/Funcionario/desfazer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="221.0" layoutY="366.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

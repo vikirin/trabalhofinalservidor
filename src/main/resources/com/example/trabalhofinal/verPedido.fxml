@@ -25,12 +25,6 @@
             <Label fx:id="pizzaLabel" alignment="TOP_LEFT" prefHeight="5000.0" prefWidth="675.0" />
          </content>
       </ScrollPane>
-      <ImageView fx:id="voltarImagem" fitHeight="83.0" fitWidth="69.0" layoutX="400.0" layoutY="597.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/desfazer.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="botaoVoltar" layoutX="382.0" layoutY="597.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="105.0" style="-fx-background-color: transparent;" />
       <ScrollPane fx:id="scrollbebida" layoutX="457.0" layoutY="151.0" prefHeight="396.0" prefWidth="391.0">
          <content>
             <Label fx:id="bebidaLabel" alignment="TOP_LEFT" prefHeight="5000.0" prefWidth="675.0" />
@@ -45,5 +39,11 @@
             <Font name="Consolas" size="30.0" />
          </font></Label>
       <Button fx:id="botaoRelatorio" layoutX="383.0" layoutY="597.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;" text="Relatório" textFill="WHITE" />
+      <ImageView fx:id="imagemVoltar" fitHeight="58.0" fitWidth="42.0" layoutX="415.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="C:/Users/notes/OneDrive - Sociedade Goiana de Cultura/Restaurante/Funcionario/desfazer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="402.0" layoutY="635.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="74.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

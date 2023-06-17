@@ -20,15 +20,15 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="botaoEditar" layoutX="179.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;" text="Editar" textFill="WHITE" />
-      <Button fx:id="botaoVoltar" layoutX="189.0" layoutY="350.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="botaoEditar" layoutX="179.0" layoutY="296.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;" text="Editar" textFill="WHITE" />
       <TextField fx:id="nomePizzaTxt" layoutX="74.0" layoutY="157.0" prefHeight="25.0" prefWidth="330.0" promptText="Nome da Pizza" style="-fx-background-radius: 10px;" />
       <TextField fx:id="valorPizzaTxt" layoutX="74.0" layoutY="197.0" prefHeight="25.0" prefWidth="330.0" promptText="Valor da Pizza" style="-fx-background-radius: 10px;" />
       <TextField fx:id="imagemTxt" layoutX="73.0" layoutY="237.0" prefHeight="25.0" prefWidth="330.0" promptText="Imagem da Pizza" style="-fx-background-radius: 10px;" />
-      <ImageView fx:id="imagemVoltar" fitHeight="58.0" fitWidth="28.0" layoutX="225.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagemVoltar" fitHeight="43.0" fitWidth="39.0" layoutX="220.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/desfazer.png" />
+            <Image url="C:/Users/notes/OneDrive - Sociedade Goiana de Cultura/Restaurante/Funcionario/desfazer.png" />
          </image>
       </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="189.0" layoutY="339.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

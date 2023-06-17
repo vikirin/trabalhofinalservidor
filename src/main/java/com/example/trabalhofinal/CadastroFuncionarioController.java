@@ -10,9 +10,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import auxiliares.CriarSenha;
-import dao.FuncionarioDAO;
-import model.funcionario;
+import com.example.trabalhofinal.auxiliares.CriarSenha;
+import com.example.trabalhofinal.dao.FuncionarioDAO;
+import com.example.trabalhofinal.model.funcionario;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
@@ -29,7 +29,7 @@ public class CadastroFuncionarioController implements Initializable {
     private Button botaoVoltar;
 
     @FXML
-    private ImageView cadastrarImagem;
+    private ImageView imagemPessoa;
 
     @FXML
     private Label erroCPF;

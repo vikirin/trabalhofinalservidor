@@ -1,6 +1,6 @@
 package com.example.trabalhofinal;
 
-import dao.ClienteDAO;
+import com.example.trabalhofinal.dao.ClienteDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -10,12 +10,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import model.cliente;
-import model.pre_pedidopizzafinal;
-import model.pre_pedidobebidafinal;
+import com.example.trabalhofinal.model.cliente;
+import com.example.trabalhofinal.model.pre_pedidopizzafinal;
+import com.example.trabalhofinal.model.pre_pedidobebidafinal;
 
-import dao.Pre_pedidobebidafinalDAO;
-import dao.Pre_pedidopizzafinalDAO;
+import com.example.trabalhofinal.dao.Pre_pedidobebidafinalDAO;
+import com.example.trabalhofinal.dao.Pre_pedidopizzafinalDAO;
+
+import com.example.trabalhofinal.jasper.jaspercontrollerpedidosfinal;
+import net.sf.jasperreports.engine.JRException;
 
 import java.net.URL;
 import java.util.List;
@@ -30,10 +33,14 @@ public class VerPedidoController implements Initializable {
     private Button botaoFechar;
 
     @FXML
+    private Button botaoRelatorio;
+
+    @FXML
     private Button botaoVoltar;
 
     @FXML
-    private Button botaoRelatorio;
+    private ImageView imagemVoltar;
+
     @FXML
     private Label lisbebida;
 
@@ -55,9 +62,6 @@ public class VerPedidoController implements Initializable {
     @FXML
     private ScrollPane scrollpiz;
 
-    @FXML
-    private ImageView voltarImagem;
-
     String pizza = "" ,bebida = "" ;
 
     @Override
@@ -76,7 +80,7 @@ public class VerPedidoController implements Initializable {
         List<pre_pedidopizzafinal> prePedidopizzafinalList = pre_PedidopizzafinalDAO.findall();
 
         for (pre_pedidopizzafinal p : prePedidopizzafinalList){
-            pizza=pizza+"-> ID: "+p.getIdPedido()+"\n-> Pizza: "+p.getSabor() +"\n-> Tamanho: "+ p.getTamanho() +"\n-> Valor: R$"+p.getValortotal();
+            pizza=pizza+"-> ID: "+p.getIdPedido()+"\n-> Pizza: "+p.getSabor() +"\n-> Tamanho: "+ p.getTamanho() +"\n-> Valor: R$"+p.getValortotalp();
             for (cliente c : clienteList){
                 if (p.getIdcliente() == c.getIdCliente()){
                     pizza= pizza + " cliente: "+c.getNome()+"\n-------------------------------------------------------------------------------\n";
@@ -86,7 +90,7 @@ public class VerPedidoController implements Initializable {
             pizzaLabel.setText(pizza);
         }
         for (pre_pedidobebidafinal b :prePedidobebidafinalList){
-            bebida=bebida+"-> ID: "+b.getIdpedido()+"\n-> Bebida: "+b.getNomebebida() +"\n-> Quantidade: "+ b.getQuantidade()+"\n-> Valor: "+b.getValortotal();
+            bebida=bebida+"-> ID: "+b.getIdpedido()+"\n-> Bebida: "+b.getNomebebida() +"\n-> Quantidade: "+ b.getQuantidade()+"\n-> Valor: "+b.getValortotalb();
             for (cliente c : clienteList){
                 if (b.getIdclinte() == c.getIdCliente()){
                     bebida= bebida + " cliente: "+c.getNome()+"\n-------------------------------------------------------------------------------\n";
@@ -110,6 +114,14 @@ public class VerPedidoController implements Initializable {
 
             }
         });
+    botaoRelatorio.setOnMouseClicked((event)->{
+        jaspercontrollerpedidosfinal jaspercontrollerpedidosfinal = new jaspercontrollerpedidosfinal();
+        try {
+            jaspercontrollerpedidosfinal.gerarRelatorio();
+        } catch (JRException e) {
+            throw new RuntimeException(e);
+        }
+    });
     }
 }
 

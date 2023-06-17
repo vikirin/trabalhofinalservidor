@@ -39,7 +39,7 @@ public class MenuFuncionarioController implements Initializable {
     private AnchorPane painelPrincipal;
 
     @FXML
-    private ImageView voltarImagem;
+    private ImageView imagemVoltar;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

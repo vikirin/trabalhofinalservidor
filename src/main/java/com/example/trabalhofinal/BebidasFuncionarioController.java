@@ -1,18 +1,21 @@
 package com.example.trabalhofinal;
 
-import dao.BebidaDAO;
-import dao.Pre_pedidobebidaDAO;
+import com.example.trabalhofinal.dao.BebidaDAO;
+import com.example.trabalhofinal.dao.Pre_pedidobebidaDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import model.bebida;
-import model.pre_pedidobebida;
+import com.example.trabalhofinal.model.bebida;
+import com.example.trabalhofinal.model.pre_pedidobebida;
+import com.example.trabalhofinal.jasper.jaspercontrollerbebida;
+import net.sf.jasperreports.engine.JRException;
 
 import java.net.URL;
 import java.util.List;
@@ -28,9 +31,6 @@ public class BebidasFuncionarioController implements Initializable {
     private Button botaoCriar;
 
     @FXML
-    private Button botaoRelatorio;
-
-    @FXML
     private Button botaoDeletar;
 
     @FXML
@@ -40,7 +40,13 @@ public class BebidasFuncionarioController implements Initializable {
     private Button botaoFechar;
 
     @FXML
+    private Button botaoRelatorio;
+
+    @FXML
     private Button botaoVoltar;
+
+    @FXML
+    private ImageView imagemVoltar;
 
     @FXML
     private Label listaB;
@@ -143,6 +149,14 @@ public class BebidasFuncionarioController implements Initializable {
                     avisoLabel.setText("Bebida não deletada!");
                 }
 
+            }
+        });
+        botaoRelatorio.setOnMouseClicked((event)->{
+            jaspercontrollerbebida jaspercontrollerbebida =new jaspercontrollerbebida();
+            try {
+                jaspercontrollerbebida.gerarRelatorio();
+            } catch (JRException e) {
+                throw new RuntimeException(e);
             }
         });
     }

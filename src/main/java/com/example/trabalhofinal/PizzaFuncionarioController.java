@@ -1,7 +1,7 @@
 package com.example.trabalhofinal;
 
-import dao.PizzaDAO;
-import dao.Pre_pedidopizzaDAO;
+import com.example.trabalhofinal.dao.PizzaDAO;
+import com.example.trabalhofinal.dao.Pre_pedidopizzaDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -12,8 +12,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import model.pizza;
-import model.pre_pedidopizza;
+import com.example.trabalhofinal.model.pizza;
+import com.example.trabalhofinal.model.pre_pedidopizza;
+import com.example.trabalhofinal.jasper.jaspercontrollerpizza;
+import net.sf.jasperreports.engine.JRException;
 
 import java.net.URL;
 import java.util.List;
@@ -61,7 +63,7 @@ public class PizzaFuncionarioController implements Initializable {
     private TextField usuarioText;
 
     @FXML
-    private ImageView voltarImagem;
+    private ImageView imagemVoltar;
 
     private static long idpizza;
 
@@ -146,6 +148,14 @@ public class PizzaFuncionarioController implements Initializable {
                 principalEditarPizza.start(new Stage());
             }catch(Exception e){
 
+            }
+        });
+        botaoRelatorio.setOnMouseClicked((event)->{
+            jaspercontrollerpizza jaspercontrollerpizza =new jaspercontrollerpizza();
+            try {
+                jaspercontrollerpizza.gerarRelatorio();
+            } catch (JRException e) {
+                throw new RuntimeException(e);
             }
         });
     }

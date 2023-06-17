@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NotaFiscal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22cdab46-c30e-4e8a-a288-3679bbebcf15">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dHJhYmFsaG8uY2xpZW50ZSAsMTUsMTUsOTk4ZDI0MTgtMzMyMS00OTA0LWFiNzMtNTNlYTNlNzhi
+NmM2Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString>
+		<![CDATA[SELECT nome,
+	senha,
+	`idCliente`,
+	`nomeConta`
+FROM trabalho.cliente]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+		<property name="com.jasapersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="senha"/>
+		<property name="com.jaspersoft.studio.field.label" value="senha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="idCliente" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="idCliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="idCliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="nomeConta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nomeConta"/>
+		<property name="com.jaspersoft.studio.field.label" value="nomeConta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement x="254" y="69" width="78" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
+				<textElement>
+					<font fontName="Serif" size="14"/>
+				</textElement>
+				<text><![CDATA[Nota Fiscal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="42" width="150" height="30" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[4 Pizzas Plus]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="410" y="99" width="140" height="20" uuid="458e7135-6dd4-4205-a973-af3a53cc97fb"/>
+				<textFieldExpression><![CDATA["Gerado em "+new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="40" y="0" width="130" height="110" uuid="92e176a4-18b6-4f33-a41d-c50ea6f525d6"/>
+				<imageExpression><![CDATA["file:///C:/Users/notes/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/Restaurante/Geral/logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="30" y="0" width="499" height="1" uuid="1b2387d7-c7b7-4435-ad93-a1bc6a5f6df4"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement x="24" y="30" width="507" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
+			</line>
+			<staticText>
+				<reportElement x="24" y="1" width="100" height="30" uuid="ea69fa5f-0544-404c-bbc4-6e695a08da66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f89b22f-7d87-4c3e-8e65-b799def2143f"/>
+				</reportElement>
+				<text><![CDATA[idCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="1" width="100" height="30" uuid="96facf37-8b04-418d-8da5-83e5498629e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25a998e9-559d-4577-9dd6-ebccbc4f50cf"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="0" width="100" height="30" uuid="e58dcc7f-7da1-4d31-a674-57354e03123a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3246605e-f141-4ddd-b3ab-ae20ef26724b"/>
+				</reportElement>
+				<text><![CDATA[nomeConta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="24" y="0" width="100" height="20" uuid="af6f0ae0-4b5b-45f6-b646-8b497c8eab4b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f89b22f-7d87-4c3e-8e65-b799def2143f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="20" uuid="f0e8eb44-26b7-42d1-a04b-51a03dd14214">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25a998e9-559d-4577-9dd6-ebccbc4f50cf"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="-1" width="100" height="30" uuid="53dfc21d-aa8a-4d2d-85e8-b6fa17724035">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3246605e-f141-4ddd-b3ab-ae20ef26724b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomeConta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="30" y="0" width="499" height="1" uuid="2dbce581-6723-4a10-8397-bbb7a6d38a58"/>
+			</line>
+			<textField>
+				<reportElement x="180" y="1" width="100" height="30" uuid="63b8dc67-4cda-45fb-b72f-aaa35bbbbc8b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="281" y="1" width="100" height="30" uuid="43f9cf39-ad90-4f42-9a55-aa95888e025e"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

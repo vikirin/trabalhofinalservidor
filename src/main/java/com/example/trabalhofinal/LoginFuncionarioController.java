@@ -6,13 +6,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import auxiliares.CriarSenha;
-import dao.FuncionarioDAO;
+import com.example.trabalhofinal.auxiliares.CriarSenha;
+import com.example.trabalhofinal.dao.FuncionarioDAO;
 
-import model.funcionario;
+import com.example.trabalhofinal.model.funcionario;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
@@ -30,6 +31,9 @@ public class LoginFuncionarioController implements Initializable {
 
     @FXML
     private Label erroLabel;
+
+    @FXML
+    private ImageView imagemLogo;
 
     @FXML
     private AnchorPane painelPrincipal;

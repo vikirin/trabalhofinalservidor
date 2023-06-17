@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NotaFiscal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22cdab46-c30e-4e8a-a288-3679bbebcf15">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dHJhYmFsaG8ucGl6emEgLDE1LDE1LGQ2YzI5YjIyLTA0OTAtNGZjYS05MDUxLWVlM2NhNjg1YTEw
+Zjs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString>
+		<![CDATA[SELECT valor,
+	`nomeProduto`,
+	`idPizza`
+FROM trabalho.pizza]]>
+	</queryString>
+	<field name="valor" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="valor"/>
+		<property name="com.jaspersoft.studio.field.label" value="valor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pizza"/>
+	</field>
+	<field name="nomeProduto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nomeProduto"/>
+		<property name="com.jaspersoft.studio.field.label" value="nomeProduto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pizza"/>
+	</field>
+	<field name="idPizza" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="idPizza"/>
+		<property name="com.jaspersoft.studio.field.label" value="idPizza"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pizza"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement x="254" y="69" width="78" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
+				<textElement>
+					<font fontName="Serif" size="14"/>
+				</textElement>
+				<text><![CDATA[Nota Fiscal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="42" width="150" height="30" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[4 Pizzas Plus]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="410" y="99" width="140" height="20" uuid="458e7135-6dd4-4205-a973-af3a53cc97fb"/>
+				<textFieldExpression><![CDATA["Gerado em "+new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="40" y="0" width="130" height="110" uuid="92e176a4-18b6-4f33-a41d-c50ea6f525d6"/>
+				<imageExpression><![CDATA["file:///C:/Users/notes/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/Restaurante/Geral/logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="30" y="0" width="499" height="1" uuid="1b2387d7-c7b7-4435-ad93-a1bc6a5f6df4"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement x="24" y="30" width="507" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
+			</line>
+			<staticText>
+				<reportElement x="124" y="1" width="100" height="30" uuid="10f94377-4768-49e7-ad92-e063b0326e1a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89040e1c-7c01-4223-a475-48543adbd874"/>
+				</reportElement>
+				<text><![CDATA[nomeProduto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="0" width="100" height="30" uuid="908c2493-4851-492c-862e-a048472efc83">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d691d03a-d465-4a59-afa3-7fc1b1423807"/>
+				</reportElement>
+				<text><![CDATA[idPizza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="0" width="100" height="30" uuid="94ee91e9-69d5-41d2-a376-83a29a56930b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29f187a4-5ac0-40a6-9210-50f45114936f"/>
+				</reportElement>
+				<text><![CDATA[valor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="124" y="-2" width="100" height="30" uuid="3fa32868-c66a-408d-bdf5-cf4125aa72b6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89040e1c-7c01-4223-a475-48543adbd874"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomeProduto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="0" width="100" height="30" uuid="63184284-8d6b-488a-9ebe-eb1dd72c3e8d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d691d03a-d465-4a59-afa3-7fc1b1423807"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idPizza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="-2" width="100" height="30" uuid="66be3d37-9b06-4647-9961-7bc9e2d288e1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29f187a4-5ac0-40a6-9210-50f45114936f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="30" y="0" width="499" height="1" uuid="2dbce581-6723-4a10-8397-bbb7a6d38a58"/>
+			</line>
+			<textField>
+				<reportElement x="180" y="1" width="100" height="30" uuid="63b8dc67-4cda-45fb-b72f-aaa35bbbbc8b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="281" y="1" width="100" height="30" uuid="43f9cf39-ad90-4f42-9a55-aa95888e025e"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
