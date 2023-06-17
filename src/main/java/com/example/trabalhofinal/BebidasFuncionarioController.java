@@ -46,9 +46,6 @@ public class BebidasFuncionarioController implements Initializable {
     private Button botaoVoltar;
 
     @FXML
-    private ImageView imagemVoltar;
-
-    @FXML
     private Label listaB;
 
     @FXML
@@ -76,9 +73,7 @@ public class BebidasFuncionarioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        pre_pedidobebida prePedidobebida = new pre_pedidobebida();
-        Pre_pedidobebidaDAO pre_PedidobebidaDAO = new Pre_pedidobebidaDAO();
-        List<pre_pedidobebida> prePedidobebidaList = pre_PedidobebidaDAO.findall();
+
         bebida bebida = new bebida();
         BebidaDAO bebidaDAO = new BebidaDAO();
         List<bebida> bebidaList = bebidaDAO.findall();
@@ -125,8 +120,10 @@ public class BebidasFuncionarioController implements Initializable {
         });
 
         botaoDeletar.setOnMouseClicked((event)->{
-            PrincipalBebidasFuncionario principalBebidasFuncionario = new PrincipalBebidasFuncionario();
 
+            pre_pedidobebida prePedidobebida = new pre_pedidobebida();
+            Pre_pedidobebidaDAO pre_PedidobebidaDAO = new Pre_pedidobebidaDAO();
+            List<pre_pedidobebida> prePedidobebidaList = pre_PedidobebidaDAO.findall();
             for (bebida b : bebidaList){
                 if (b.getIdBebida()==Long.valueOf(usuarioText.getText())){
                     bebidaDAO.delete(Long.valueOf(usuarioText.getText()));
@@ -137,6 +134,7 @@ public class BebidasFuncionarioController implements Initializable {
                             pre_PedidobebidaDAO.delete(beb.getIdpedido());
                         }
                     }
+                    PrincipalBebidasFuncionario principalBebidasFuncionario = new PrincipalBebidasFuncionario();
                     PrincipalBebidasFuncionario.getStage().close();
                     try{
                         principalBebidasFuncionario.start(new Stage());
@@ -148,7 +146,6 @@ public class BebidasFuncionarioController implements Initializable {
                     avisoLabel.setTextFill(Paint.valueOf("#ff0000"));
                     avisoLabel.setText("Bebida não deletada!");
                 }
-
             }
         });
         botaoRelatorio.setOnMouseClicked((event)->{

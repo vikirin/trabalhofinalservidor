@@ -89,18 +89,18 @@ FROM trabalho.pre_pedidobebidafinal,
 	<title>
 		<band height="119" splitType="Stretch">
 			<staticText>
-				<reportElement x="254" y="69" width="78" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
+				<reportElement x="239" y="69" width="96" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
-				<text><![CDATA[Nota Fiscal]]></text>
+				<text><![CDATA[Relatório Pedido]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="220" y="42" width="150" height="30" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
 				<textElement>
 					<font size="22"/>
 				</textElement>
-				<text><![CDATA[4 Pizzas Plus]]></text>
+				<text><![CDATA[4 Tipos-Plus]]></text>
 			</staticText>
 			<textField pattern="HH:mm">
 				<reportElement x="410" y="99" width="140" height="20" uuid="458e7135-6dd4-4205-a973-af3a53cc97fb"/>
@@ -120,106 +120,109 @@ FROM trabalho.pre_pedidobebidafinal,
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="32" splitType="Stretch">
+		<band height="36" splitType="Stretch">
 			<line>
-				<reportElement x="24" y="30" width="507" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
+				<reportElement x="3" y="23" width="267" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
 			</line>
 			<staticText>
-				<reportElement x="420" y="0" width="100" height="30" uuid="ac8bc6f7-3f1c-44ce-b269-ec286f1d8be8">
+				<reportElement x="428" y="0" width="60" height="18" uuid="ac8bc6f7-3f1c-44ce-b269-ec286f1d8be8">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20326f17-d344-4ced-9873-44e19dad1c08"/>
 				</reportElement>
-				<text><![CDATA[quntidade]]></text>
+				<text><![CDATA[Quantidade]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="210" y="0" width="100" height="30" uuid="faa3b90c-7134-4516-b74b-366357e2354d">
+				<reportElement x="228" y="0" width="36" height="16" uuid="faa3b90c-7134-4516-b74b-366357e2354d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6930eadd-aaab-43cc-91bb-6a4b8c6c8f2b"/>
 				</reportElement>
-				<text><![CDATA[valortotalp]]></text>
+				<text><![CDATA[Preço]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="0" width="100" height="30" uuid="f8c5cb16-e1a3-4e9c-b29a-3de721d74108">
+				<reportElement x="85" y="1" width="40" height="14" uuid="f8c5cb16-e1a3-4e9c-b29a-3de721d74108">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f310df6-ab3e-404a-ac78-db248723b9f4"/>
 				</reportElement>
-				<text><![CDATA[sabor]]></text>
+				<text><![CDATA[Pizza]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="110" y="1" width="100" height="30" uuid="176b0908-1978-423e-adbf-f9df257e2fcd">
+				<reportElement x="152" y="1" width="50" height="14" uuid="176b0908-1978-423e-adbf-f9df257e2fcd">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a3306e87-baaa-423e-bccc-e30127892932"/>
 				</reportElement>
-				<text><![CDATA[tamanho]]></text>
+				<text><![CDATA[Tamanho]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-20" y="0" width="30" height="30" uuid="e1855fa4-8033-4ec1-a041-9d0c3b09112e">
+				<reportElement x="21" y="0" width="20" height="16" uuid="e1855fa4-8033-4ec1-a041-9d0c3b09112e">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="43022f25-9dcb-4461-90f5-f1a2a6ccc767"/>
 				</reportElement>
-				<text><![CDATA[id]]></text>
+				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="340" y="1" width="100" height="30" uuid="8408b520-6127-4473-97e2-407fafe479bc">
+				<reportElement x="364" y="1" width="40" height="18" uuid="8408b520-6127-4473-97e2-407fafe479bc">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad5f921e-87bd-4b5a-af2d-faefdb16a15d"/>
 				</reportElement>
-				<text><![CDATA[nomebebida]]></text>
+				<text><![CDATA[Bebida]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="310" y="1" width="100" height="30" uuid="ac904062-4a6c-48ed-9ba5-94d85f8ccade">
+				<reportElement x="301" y="1" width="10" height="18" uuid="ac904062-4a6c-48ed-9ba5-94d85f8ccade">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="254ca8e6-db9b-49b5-aa83-183ad05e4e46"/>
 				</reportElement>
-				<text><![CDATA[idBebida]]></text>
+				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="520" y="1" width="100" height="30" uuid="df79f398-b501-4cb0-9337-6db5d67c8153">
+				<reportElement x="512" y="1" width="30" height="16" uuid="df79f398-b501-4cb0-9337-6db5d67c8153">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa4f856e-9aac-4740-ac60-2c516b93f792"/>
 				</reportElement>
-				<text><![CDATA[valortotalb]]></text>
+				<text><![CDATA[Preço]]></text>
 			</staticText>
+			<line>
+				<reportElement x="290" y="23" width="259" height="1" uuid="c7efaf0a-8fc4-41fb-b640-d4328ed4ef4e"/>
+			</line>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="93" splitType="Stretch">
+		<band height="29" splitType="Stretch">
 			<textField>
-				<reportElement x="340" y="0" width="100" height="30" uuid="9f484dab-a781-4fd3-aa5b-550d43307cc3">
+				<reportElement x="357" y="-2" width="100" height="30" uuid="9f484dab-a781-4fd3-aa5b-550d43307cc3">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad5f921e-87bd-4b5a-af2d-faefdb16a15d"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{nomebebida}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="510" y="0" width="100" height="30" uuid="d18b4ed1-dc52-4a09-b0fe-b6a26f7662cd">
+				<reportElement x="510" y="-2" width="100" height="30" uuid="d18b4ed1-dc52-4a09-b0fe-b6a26f7662cd">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa4f856e-9aac-4740-ac60-2c516b93f792"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{valortotalb}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["R$" + $F{valortotalb}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="420" y="0" width="100" height="30" uuid="06ff5355-8f18-441c-b0f8-4c1cd2100475">
+				<reportElement x="447" y="-2" width="100" height="30" uuid="06ff5355-8f18-441c-b0f8-4c1cd2100475">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20326f17-d344-4ced-9873-44e19dad1c08"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{quntidade}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="210" y="-2" width="100" height="30" uuid="21b1ccf0-44ee-4f18-a701-9716e98e9371">
+				<reportElement x="228" y="-2" width="72" height="30" uuid="21b1ccf0-44ee-4f18-a701-9716e98e9371">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6930eadd-aaab-43cc-91bb-6a4b8c6c8f2b"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{valortotalp}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["R$" + $F{valortotalp}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="-2" width="100" height="30" uuid="982ede84-de52-454f-a8b5-abbccb9237f6">
+				<reportElement x="77" y="-2" width="100" height="30" uuid="982ede84-de52-454f-a8b5-abbccb9237f6">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f310df6-ab3e-404a-ac78-db248723b9f4"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sabor}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="110" y="-2" width="100" height="30" uuid="c404bcd1-12a0-4bfb-ae3f-66157ffd1ebc">
+				<reportElement x="156" y="-2" width="100" height="30" uuid="c404bcd1-12a0-4bfb-ae3f-66157ffd1ebc">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a3306e87-baaa-423e-bccc-e30127892932"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{tamanho}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="-20" y="-2" width="30" height="30" uuid="baf4a492-28e6-4e78-967b-91c60d729daf">
+				<reportElement x="23" y="-2" width="30" height="30" uuid="baf4a492-28e6-4e78-967b-91c60d729daf">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e79d18e5-0a57-4bb5-b908-24428544f416"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{id_pedido}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="310" y="-2" width="30" height="30" uuid="7ec739d0-527a-458f-b62e-ab683d4039a5">
+				<reportElement x="301" y="-2" width="30" height="30" uuid="7ec739d0-527a-458f-b62e-ab683d4039a5">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="254ca8e6-db9b-49b5-aa83-183ad05e4e46"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{idBebida}]]></textFieldExpression>

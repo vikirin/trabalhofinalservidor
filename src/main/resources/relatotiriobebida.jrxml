@@ -33,18 +33,18 @@ FROM trabalho.bebida]]>
 	<title>
 		<band height="119" splitType="Stretch">
 			<staticText>
-				<reportElement x="254" y="69" width="78" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
+				<reportElement x="231" y="69" width="106" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
-				<text><![CDATA[Nota Fiscal]]></text>
+				<text><![CDATA[Relatório Bebidas]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="220" y="42" width="150" height="30" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
+				<reportElement x="220" y="40" width="130" height="30" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
 				<textElement>
 					<font size="22"/>
 				</textElement>
-				<text><![CDATA[4 Pizzas Plus]]></text>
+				<text><![CDATA[4 Tipos-Plus]]></text>
 			</staticText>
 			<textField pattern="HH:mm">
 				<reportElement x="410" y="99" width="140" height="20" uuid="458e7135-6dd4-4205-a973-af3a53cc97fb"/>
@@ -66,44 +66,44 @@ FROM trabalho.bebida]]>
 	<columnHeader>
 		<band height="32" splitType="Stretch">
 			<line>
-				<reportElement x="24" y="30" width="507" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
+				<reportElement x="130" y="23" width="309" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
 			</line>
 			<staticText>
-				<reportElement x="220" y="1" width="100" height="30" uuid="3f60ca74-8118-405e-8359-0eac7aaabf24">
+				<reportElement x="365" y="2" width="100" height="30" uuid="3f60ca74-8118-405e-8359-0eac7aaabf24">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ad7c0a8-c5f2-4cee-a861-97d387e2a6d1"/>
 				</reportElement>
-				<text><![CDATA[valor]]></text>
+				<text><![CDATA[Preço]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="120" y="0" width="100" height="30" uuid="3acfe0a5-6319-46c3-b58d-cf0cb99dded9">
+				<reportElement x="248" y="1" width="100" height="30" uuid="3acfe0a5-6319-46c3-b58d-cf0cb99dded9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b31459f-3df7-4f7d-92b9-31d940608faa"/>
 				</reportElement>
-				<text><![CDATA[nomeProduto]]></text>
+				<text><![CDATA[Bebida]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="0" width="100" height="30" uuid="85ad60a1-facd-4564-80c5-31fdb6e5b8a4">
+				<reportElement x="148" y="1" width="100" height="30" uuid="85ad60a1-facd-4564-80c5-31fdb6e5b8a4">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de328029-9a37-43ef-939e-f5ef0119d12d"/>
 				</reportElement>
-				<text><![CDATA[idBebida]]></text>
+				<text><![CDATA[ID]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="46" splitType="Stretch">
+		<band height="33" splitType="Stretch">
 			<textField>
-				<reportElement x="220" y="-2" width="100" height="30" uuid="315370c6-9c24-4717-8e53-633bd46c7cdc">
+				<reportElement x="365" y="-1" width="100" height="30" uuid="315370c6-9c24-4717-8e53-633bd46c7cdc">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ad7c0a8-c5f2-4cee-a861-97d387e2a6d1"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["R$" + $F{valor}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="120" y="0" width="100" height="30" uuid="ab8686c7-f866-4632-80e7-b931e90ca5c9">
+				<reportElement x="240" y="1" width="100" height="30" uuid="ab8686c7-f866-4632-80e7-b931e90ca5c9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b31459f-3df7-4f7d-92b9-31d940608faa"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{nomeProduto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="20" y="0" width="100" height="30" uuid="c6afa18b-5052-4411-b485-7259ff013475">
+				<reportElement x="146" y="1" width="100" height="30" uuid="c6afa18b-5052-4411-b485-7259ff013475">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de328029-9a37-43ef-939e-f5ef0119d12d"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{idBebida}]]></textFieldExpression>

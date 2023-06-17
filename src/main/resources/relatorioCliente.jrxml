@@ -40,18 +40,18 @@ FROM trabalho.cliente]]>
 	<title>
 		<band height="119" splitType="Stretch">
 			<staticText>
-				<reportElement x="254" y="69" width="78" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
+				<reportElement x="235" y="69" width="98" height="22" uuid="5b9710e3-7881-4412-ba07-06135d0f872b"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
-				<text><![CDATA[Nota Fiscal]]></text>
+				<text><![CDATA[Relatório Cliente]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="220" y="42" width="150" height="30" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
+				<reportElement x="188" y="27" width="190" height="56" uuid="b626dfff-6ee1-4956-bbc6-d4bdc65ba1ab"/>
 				<textElement>
-					<font size="22"/>
+					<font size="33"/>
 				</textElement>
-				<text><![CDATA[4 Pizzas Plus]]></text>
+				<text><![CDATA[4 Tipos-Plus]]></text>
 			</staticText>
 			<textField pattern="HH:mm">
 				<reportElement x="410" y="99" width="140" height="20" uuid="458e7135-6dd4-4205-a973-af3a53cc97fb"/>
@@ -73,44 +73,44 @@ FROM trabalho.cliente]]>
 	<columnHeader>
 		<band height="32" splitType="Stretch">
 			<line>
-				<reportElement x="24" y="30" width="507" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
+				<reportElement x="120" y="22" width="319" height="1" uuid="812aa4af-4e51-41ac-8585-11b9dd24203b"/>
 			</line>
 			<staticText>
-				<reportElement x="24" y="1" width="100" height="30" uuid="ea69fa5f-0544-404c-bbc4-6e695a08da66">
+				<reportElement x="159" y="2" width="100" height="30" uuid="ea69fa5f-0544-404c-bbc4-6e695a08da66">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f89b22f-7d87-4c3e-8e65-b799def2143f"/>
 				</reportElement>
-				<text><![CDATA[idCliente]]></text>
+				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="240" y="1" width="100" height="30" uuid="96facf37-8b04-418d-8da5-83e5498629e0">
+				<reportElement x="374" y="2" width="100" height="30" uuid="96facf37-8b04-418d-8da5-83e5498629e0">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25a998e9-559d-4577-9dd6-ebccbc4f50cf"/>
 				</reportElement>
-				<text><![CDATA[nome]]></text>
+				<text><![CDATA[Nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="0" width="100" height="30" uuid="e58dcc7f-7da1-4d31-a674-57354e03123a">
+				<reportElement x="253" y="1" width="100" height="30" uuid="e58dcc7f-7da1-4d31-a674-57354e03123a">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3246605e-f141-4ddd-b3ab-ae20ef26724b"/>
 				</reportElement>
-				<text><![CDATA[nomeConta]]></text>
+				<text><![CDATA[Usuário]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="34" splitType="Stretch">
+		<band height="25" splitType="Stretch">
 			<textField>
-				<reportElement x="24" y="0" width="100" height="20" uuid="af6f0ae0-4b5b-45f6-b646-8b497c8eab4b">
+				<reportElement x="160" y="1" width="100" height="20" uuid="af6f0ae0-4b5b-45f6-b646-8b497c8eab4b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f89b22f-7d87-4c3e-8e65-b799def2143f"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{idCliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="240" y="0" width="100" height="20" uuid="f0e8eb44-26b7-42d1-a04b-51a03dd14214">
+				<reportElement x="372" y="1" width="100" height="20" uuid="f0e8eb44-26b7-42d1-a04b-51a03dd14214">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25a998e9-559d-4577-9dd6-ebccbc4f50cf"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="124" y="-1" width="100" height="30" uuid="53dfc21d-aa8a-4d2d-85e8-b6fa17724035">
+				<reportElement x="261" y="0" width="100" height="20" uuid="53dfc21d-aa8a-4d2d-85e8-b6fa17724035">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3246605e-f141-4ddd-b3ab-ae20ef26724b"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{nomeConta}]]></textFieldExpression>

@@ -77,7 +77,7 @@ public class Pre_pedidobebidaDAO implements ipre_pedidobebidaDAO {
             while (rs.next()){
                 pre_pedidobebida pre_pedidobebida =new pre_pedidobebida();
                 pre_pedidobebida.setNomebebida(rs.getString("nomebebida"));
-                pre_pedidobebida.setValortotal(rs.getFloat("valortotal"));
+                pre_pedidobebida.setValortotal(rs.getFloat("valortotalb"));
                 pre_pedidobebida.setQuantidade(rs.getLong("quntidade"));
                 pre_pedidobebida.setIdpedido(rs.getLong("idpedido"));
                 pre_pedidobebida.setIdbebida(rs.getLong("idbebida"));

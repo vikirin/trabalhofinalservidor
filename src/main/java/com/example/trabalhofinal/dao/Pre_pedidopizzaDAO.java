@@ -14,7 +14,7 @@ public class Pre_pedidopizzaDAO implements ipre_pedidopizzaDAO {
     public pre_pedidopizza create(pre_pedidopizza pre_pedidopizza) {
         try(Connection connection = connectionFactory.getConnection()){
             String query = "INSERT INTO pre_pedidopizza"
-                    +"(tamanho,sabor,valortotal,idcliente,idPizza)"+
+                    +"(tamanho,sabor,valortotalp,idcliente,idPizza)"+
                     " VALUES (?,?,?,?,?)";
             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, pre_pedidopizza.getTamanho());
@@ -37,7 +37,7 @@ public class Pre_pedidopizzaDAO implements ipre_pedidopizzaDAO {
     public pre_pedidopizza update(pre_pedidopizza pre_pedidopizza) {
         try(Connection connection = connectionFactory.getConnection()){
             String query = "UPDATE pre_pedidopizza SET "
-                    +"tamanho = ?,sabor = ?,valortotal = ?," +
+                    +"tamanho = ?,sabor = ?,valortotalp = ?," +
                     "idcliente = ?, idPizza = ? "+
                     "WHERE id_Pedido = ? ;";
             PreparedStatement statement = connection.prepareStatement(query);
@@ -78,7 +78,7 @@ public class Pre_pedidopizzaDAO implements ipre_pedidopizzaDAO {
                 pre_pedidopizza pre_pedidopizza =new pre_pedidopizza();
                 pre_pedidopizza.setTamanho(rs.getString("tamanho"));
                 pre_pedidopizza.setSabor(rs.getString("sabor"));
-                pre_pedidopizza.setValortotal(rs.getFloat("valortotal"));
+                pre_pedidopizza.setValortotal(rs.getFloat("valortotalp"));
                 pre_pedidopizza.setIdPedido(rs.getLong("id_Pedido"));
                 pre_pedidopizza.setIdPizza((rs.getLong("idPizza")));
                 pre_pedidopizza.setIdcliente(rs.getLong("idcliente"));
@@ -103,7 +103,7 @@ public class Pre_pedidopizzaDAO implements ipre_pedidopizzaDAO {
             pre_pedidopizza = new pre_pedidopizza(
                     rs.getString("tamanho"),
                     rs.getString("sabor"),
-                    rs.getFloat("valortotal"),
+                    rs.getFloat("valortotalp"),
                     rs.getLong("id_Pedido"),
                     rs.getLong("idPizza"),
                     rs.getLong("idcliente")
