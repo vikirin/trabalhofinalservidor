@@ -39,19 +39,19 @@ public class PizzaFuncionarioController implements Initializable {
     private Button botaoFechar;
 
     @FXML
+    private Button botaoRelatorio;
+
+    @FXML
     private Button botaoVoltar;
 
     @FXML
-    private Button botaoRelatorio;
+    private ImageView imagemVlt;
 
     @FXML
     private Label listagemP;
 
     @FXML
     private AnchorPane painelPrincipal;
-
-    @FXML
-    private ImageView pessoaImagem;
 
     @FXML
     private Label pizzaLabel;
@@ -61,9 +61,6 @@ public class PizzaFuncionarioController implements Initializable {
 
     @FXML
     private TextField usuarioText;
-
-    @FXML
-    private ImageView imagemVoltar;
 
     private static long idpizza;
 

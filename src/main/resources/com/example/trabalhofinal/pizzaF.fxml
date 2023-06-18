@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -34,6 +36,11 @@
          </content>
       </ScrollPane>
       <Button fx:id="botaoRelatorio" layoutX="323.0" layoutY="392.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;" text="Relatório" textFill="WHITE" />
-      <Button fx:id="botaoVoltar" layoutX="212.0" layoutY="453.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+      <ImageView fx:id="imagemVlt" fitHeight="77.0" fitWidth="39.0" layoutX="207.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="C:/Users/notes/OneDrive - Sociedade Goiana de Cultura/Restaurante/Funcionario/desfazer - Copia.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVoltar" layoutX="200.0" layoutY="453.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

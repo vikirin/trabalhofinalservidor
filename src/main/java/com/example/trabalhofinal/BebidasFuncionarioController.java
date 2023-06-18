@@ -46,6 +46,9 @@ public class BebidasFuncionarioController implements Initializable {
     private Button botaoVoltar;
 
     @FXML
+    private ImageView imagemVta;
+
+    @FXML
     private Label listaB;
 
     @FXML
